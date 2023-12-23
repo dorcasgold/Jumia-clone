@@ -13,20 +13,34 @@ const products = [
       "sports",
       "apparel"
     ]
+  }, {
+    id: "c45ds34s-zx5d44-4d34-rc55-s321s3aas",
+    image: "images/products/malt.jpg",
+    name: "Malta India 8 Ounce Cans ( 2 Six Packs )",
+    rating: {
+      stars: 4,
+      count: 105
+    },
+    priceCents: 2299,
+    keywords: [
+      "soft drinks",
+      "Bottled Beverages, Water & Drink Mixes",
+      "malt"
+    ]
   },
   {
-    id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
-    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+    id: "d21345xc-5as-4b85-3cc-e903sa455512",
+    image: "images/products/powerbank.jpg",
+    name: "Portable Charger Power-Bank 15000mAh Fast Charging Built-in AC Wall Plug and 2 Output Cables",
     rating: {
       stars: 4.5,
-      count: 87
+      count: 103
     },
-    priceCents: 1090,
+    priceCents: 3500,
     keywords: [
-      "socks",
-      "sports",
-      "apparel"
+      "Mobile Phone Accessories",
+      "Power-Bank",
+      "Portable Charger"
     ]
   },
   {
