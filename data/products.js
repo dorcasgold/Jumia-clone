@@ -25,6 +25,7 @@ const products = [
     keywords: [
       "soft drinks",
       "Bottled Beverages, Water & Drink Mixes",
+      "Beverages",
       "malt"
     ]
   },
