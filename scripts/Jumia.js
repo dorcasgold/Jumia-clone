@@ -70,7 +70,7 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     quantity = quantitySelector.value
     quantity = Number(quantity)
     console.log(quantity);
-    //2
+
     if (matchingItem) {
       matchingItem.quantity += quantity;
     } else {
