@@ -69,7 +69,6 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     );
     quantity = quantitySelector.value
     quantity = Number(quantity)
-    console.log(quantity);
 
     if (matchingItem) {
       matchingItem.quantity += quantity;
