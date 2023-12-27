@@ -1,4 +1,6 @@
-let productsHTML = ""
+import { cart } from "../data/cart.js";
+
+let productsHTML = "";
 
 products.forEach((product) => {
   productsHTML += `
@@ -67,7 +69,8 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     const quantitySelector = document.querySelector(
       `.js-quantity-selector-${productId}`
     );
-    quantity = quantitySelector.value
+
+    let quantity = quantitySelector.value
     quantity = Number(quantity)
 
     if (matchingItem) {
@@ -85,5 +88,6 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     })
 
     document.querySelector(".cart-quantity").textContent = cartquantity;
+    console.log(cart);
   })
 })
