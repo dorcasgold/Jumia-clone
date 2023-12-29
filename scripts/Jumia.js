@@ -66,6 +66,16 @@ function updateCart() {
   document.querySelector(".cart-quantity").textContent = cartquantity;
   console.log(cart);
 }
+function updateCartQuantity() {
+  let cartquantity = 0;
+  cart.forEach((cartItem) => {
+    cartquantity += cartItem.quantity
+  });
+  document.querySelector('.js-cart-quantity')
+    .innerHTML = cartquantity;
+}
+updateCartQuantity()
+
 document.querySelector(".js-products-grid").innerHTML = productsHTML;
 
 document.querySelectorAll(".js-add-to-cart").forEach((button) => {
