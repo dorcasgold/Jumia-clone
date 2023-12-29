@@ -1,11 +1,13 @@
-import { cart, addToCart } from "../data/cart.js";
-import { products } from "../data/products.js";
-import { formatCurrency } from "./utils/money.js";
+// Function to filter products based on a search term
+function filterProducts(searchTerm) {
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-let productsHTML = "";
+  let filteredProductsHTML = "";
 
-products.forEach((product) => {
-  productsHTML += `
+  filteredProducts.forEach((product) => {
+    filteredProductsHTML += `
         <div class="product-container">
         <div class="product-image-container">
           <img class="product-image" src="${product.image}">
@@ -53,46 +55,15 @@ products.forEach((product) => {
         </button>
       </div>
   `;
-})
-
-
-document.querySelector(".js-products-grid").innerHTML = productsHTML;
-function updateCart() {
-  let cartquantity = 0;
-  cart.forEach((cartItem) => {
-    cartquantity += cartItem.quantity
   });
 
-  document.querySelector(".cart-quantity").textContent = cartquantity;
-  console.log(cart);
+  // Update the displayed products with the filtered HTML
+  document.querySelector(".js-products-grid").innerHTML = filteredProductsHTML;
 }
-function updateCartQuantity() {
-  let cartquantity = 0;
-  cart.forEach((cartItem) => {
-    cartquantity += cartItem.quantity
-  });
-  document.querySelector('.js-cart-quantity')
-    .innerHTML = cartquantity;
-}
-updateCartQuantity()
 
-
-const addedMessageTimeouts = {};
-document.querySelectorAll(".js-add-to-cart").forEach((button) => {
-  button.addEventListener('click', () => {
-    const productId = button.dataset.productId;
-
-    // addedMessage
-    const addedMessage = document.querySelector(
-      `.js-added-to-cart-${productId}`
-    );
-    addedMessage.classList.add('added-to-cart-visible');
-    //setTimeout for addedMessage
-    setTimeout(() => {
-      addedMessage.classList.remove('added-to-cart-visible');
-    }, 2000);
-
-    addToCart(productId)
-    updateCart()
-  })
-})
+// Example usage:
+const searchBox = document.querySelector("#search-box");
+searchBox.addEventListener("input", function () {
+  const searchTerm = searchBox.value.trim();
+  filterProducts(searchTerm);
+});

@@ -106,7 +106,7 @@
 }
 
 .orders-link {
-  color: black;
+  color: #f8991e;
   transition: background-color 1s linear, color .5s linear;
 }
 
