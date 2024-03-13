@@ -12,6 +12,7 @@ export const products = [
       "socks",
       "sports",
       "apparel"
+"cotton"
     ]
   }, {
     id: "c45ds34s-zx5d44-4d34-rc55-s321s3aas",
